@@ -9,6 +9,7 @@
 import WishKitShared
 import Foundation
 
+@available(iOS 14, *)
 struct MockData {
     static var wishlist: [WishResponse] {
         let wishlist = [

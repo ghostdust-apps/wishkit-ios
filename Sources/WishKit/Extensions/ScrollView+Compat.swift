@@ -8,6 +8,7 @@
 
 import SwiftUI
 
+@available(iOS 14, *)
 extension ScrollView {
     func refreshableCompat(action: @escaping @Sendable () async -> Void) -> some View {
         if #available(iOS 15, *) {

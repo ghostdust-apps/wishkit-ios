@@ -8,6 +8,7 @@
 
 import SwiftUI
 
+@available(iOS 14, *)
 final class CommentModel: ObservableObject {
     @Published
     var newCommentValue = ""

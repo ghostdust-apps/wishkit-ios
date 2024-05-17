@@ -8,6 +8,7 @@
 
 import SwiftUI
 
+@available(iOS 14, *)
 extension View {
     func wkShadow() -> some View {
         if WishKit.config.dropShadow == .show {

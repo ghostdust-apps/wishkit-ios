@@ -14,6 +14,7 @@ import SwiftUI
 import WishKitShared
 import Combine
 
+@available(iOS 14, *)
 public struct WishKit {
     
     private static var subscribers: Set<AnyCancellable> = []
@@ -49,6 +50,7 @@ public struct WishKit {
 
 // MARK: - Payment Model
 
+@available(iOS 14, *)
 class RoundUp: NSDecimalNumberBehaviors {
     func scale() -> Int16 {
         return 0
@@ -63,6 +65,7 @@ class RoundUp: NSDecimalNumberBehaviors {
     }
 }
 
+@available(iOS 14, *)
 public struct Payment {
 
     let amount: Int
@@ -95,6 +98,7 @@ public struct Payment {
 
 // MARK: - Update User Logic
 
+@available(iOS 14, *)
 extension WishKit {
     public static func updateUser(customID: String) {
         self.user.customID = customID

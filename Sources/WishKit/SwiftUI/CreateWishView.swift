@@ -10,6 +10,7 @@ import SwiftUI
 import Combine
 import WishKitShared
 
+@available(iOS 14, *)
 struct CreateWishView: View {
 
     @Environment(\.presentationMode)
@@ -298,6 +299,7 @@ struct CreateWishView: View {
 
 // MARK: - Color Scheme
 
+@available(iOS 14, *)
 extension CreateWishView {
 
     var textColor: Color {

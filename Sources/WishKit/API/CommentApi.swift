@@ -9,6 +9,7 @@
 import Foundation
 import WishKitShared
 
+@available(iOS 14, *)
 struct CommentApi: RequestCreatable {
 
     private static let baseUrl = "\(ProjectSettings.apiUrl)"

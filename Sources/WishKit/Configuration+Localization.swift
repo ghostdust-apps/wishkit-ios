@@ -6,6 +6,7 @@
 //  Copyright © 2023 Martin Lasek. All rights reserved.
 //
 
+@available(iOS 14, *)
 extension Configuration {
 
     public struct Localization {

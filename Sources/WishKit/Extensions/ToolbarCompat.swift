@@ -8,6 +8,7 @@
 
 import SwiftUI
 
+@available(iOS 14, *)
 extension View {
     @ViewBuilder
     func toolbarKeyboardDoneButton() -> some View {
