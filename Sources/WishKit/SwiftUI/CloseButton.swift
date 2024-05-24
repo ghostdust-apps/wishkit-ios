@@ -8,6 +8,7 @@
 
 import SwiftUI
 
+@available(iOS 14, *)
 struct CloseButton: View {
 
     private let closeAction: () -> Void

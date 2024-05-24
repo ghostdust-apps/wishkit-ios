@@ -8,6 +8,7 @@
 
 import Foundation
 
+@available(iOS 14, *)
 public struct Configuration {
 
     /// Hides/Shows the status badge of a wish e.g. "Approved" or "Implemented".
@@ -40,6 +41,7 @@ public struct Configuration {
 
 // MARK: - Display
 
+@available(iOS 14, *)
 extension Configuration {
     public enum Display {
         case show
@@ -49,6 +51,7 @@ extension Configuration {
 
 // MARK: - Email Field
 
+@available(iOS 14, *)
 extension Configuration {
     public enum EmailField {
         case none

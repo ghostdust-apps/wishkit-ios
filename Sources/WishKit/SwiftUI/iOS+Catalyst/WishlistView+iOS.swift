@@ -11,6 +11,7 @@ import SwiftUI
 import WishKitShared
 import Combine
 
+@available(iOS 14, *)
 extension View {
     // MARK: Public - Wrap in Navigation
 
@@ -22,6 +23,7 @@ extension View {
     }
 }
 
+@available(iOS 14, *)
 struct WishlistViewIOS: View {
 
     @Environment(\.colorScheme)
@@ -174,6 +176,7 @@ struct WishlistViewIOS: View {
     }
 }
 
+@available(iOS 14, *)
 extension WishlistViewIOS {
     var arrowColor: Color {
         let userUUID = UUIDManager.getUUID()

@@ -10,6 +10,7 @@ import SwiftUI
 import WishKitShared
 import Combine
 
+@available(iOS 14, *)
 struct DetailWishView: View {
 
     // MARK: - Private
@@ -107,6 +108,7 @@ struct DetailWishView: View {
 
 // MARK: - Color Scheme
 
+@available(iOS 14, *)
 extension DetailWishView {
 
     var backgroundColor: Color {

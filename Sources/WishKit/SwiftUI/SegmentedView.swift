@@ -9,6 +9,7 @@
 import SwiftUI
 import WishKitShared
 
+@available(iOS 14, *)
 struct SegmentedView: View {
 
     @Binding
@@ -25,6 +26,7 @@ struct SegmentedView: View {
     }
 }
 
+@available(iOS 14, *)
 extension WishState: Identifiable {
     public var id: Self { self }
 

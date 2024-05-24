@@ -8,6 +8,7 @@
 
 import SwiftUI
 
+@available(iOS 14, *)
 extension Configuration {
     public struct AddButton {
         public var display: Display = .show
@@ -22,6 +23,7 @@ extension Configuration {
     }
 }
 
+@available(iOS 14, *)
 extension Configuration.AddButton {
     public enum Padding {
         case small

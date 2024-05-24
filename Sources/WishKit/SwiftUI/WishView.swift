@@ -9,6 +9,7 @@
 import SwiftUI
 import WishKitShared
 
+@available(iOS 14, *)
 struct WishView: View {
 
     // Helps differentiate where this view is used (in the list or in detail view).
@@ -197,6 +198,7 @@ struct WishView: View {
 
 // MARK: - Darkmode
 
+@available(iOS 14, *)
 extension WishView {
     var arrowColor: Color {
         let userUUID = UUIDManager.getUUID()

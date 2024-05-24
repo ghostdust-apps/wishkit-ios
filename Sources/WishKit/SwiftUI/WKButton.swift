@@ -8,6 +8,7 @@
 
 import SwiftUI
 
+@available(iOS 14, *)
 struct WKButton: View {
 
     @Environment(\.colorScheme)
@@ -88,6 +89,7 @@ struct WKButton: View {
 
 // MARK: - ButtonStyle
 
+@available(iOS 14, *)
 extension WKButton {
     enum ButtonStyle {
         case primary

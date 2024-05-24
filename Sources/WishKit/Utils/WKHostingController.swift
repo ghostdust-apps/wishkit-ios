@@ -8,6 +8,7 @@
 #if canImport(UIKit)
 import SwiftUI
 
+@available(iOS 14, *)
 final class WKHostingController<Content>: UIHostingController<Content> where Content: View {
     override init(rootView: Content) {
         super.init(rootView: rootView)

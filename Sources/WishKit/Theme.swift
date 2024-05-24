@@ -8,6 +8,7 @@
 
 import SwiftUI
 
+@available(iOS 14, *)
 public struct Theme {
 
     /// This is for the Add-Button, Segmented Control, and Vote-Button.
@@ -46,6 +47,7 @@ public struct Theme {
     #endif
 }
 
+@available(iOS 14, *)
 struct PrivateTheme {
     struct ColorScheme {
         let light: Color
@@ -65,6 +67,7 @@ struct PrivateTheme {
 
 // MARK: - StatusBadge
 
+@available(iOS 14, *)
 extension Theme {
     public struct BadgeTheme {
 
@@ -94,6 +97,7 @@ extension Theme {
     }
 }
 
+@available(iOS 14, *)
 extension Theme {
     public struct Scheme {
         var light: Color

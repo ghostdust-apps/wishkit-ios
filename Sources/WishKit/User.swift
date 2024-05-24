@@ -8,6 +8,7 @@
 
 import WishKitShared
 
+@available(iOS 14, *)
 final class User {
     var customID: String?
     var email: String?

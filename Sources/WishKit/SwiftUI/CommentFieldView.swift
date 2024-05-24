@@ -9,6 +9,7 @@
 import SwiftUI
 import WishKitShared
 
+@available(iOS 14, *)
 struct CommentFieldView: View {
 
     @Environment(\.colorScheme)
@@ -63,6 +64,7 @@ struct CommentFieldView: View {
     }
 }
 
+@available(iOS 14, *)
 extension CommentFieldView {
 
     var textColor: Color {

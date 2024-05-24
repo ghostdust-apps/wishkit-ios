@@ -8,6 +8,7 @@
 
 import SwiftUI
 
+@available(iOS 14, *)
 struct SingleCommentView: View {
 
     @Environment(\.colorScheme)

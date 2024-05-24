@@ -9,6 +9,7 @@
 import SwiftUI
 import WishKitShared
 
+@available(iOS 14, *)
 struct CommentListView: View {
 
     @Binding

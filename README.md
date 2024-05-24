@@ -18,12 +18,19 @@ WishKit allows your users to request and vote on features in your app that <b>ju
 <img src="Resources/banner-min.png" />
 
 ## Index
+- [Requirements](#requirements)
 - [Setup (UIKit)](#uikit)
 - [Setup (SwiftUI)](#swiftui)
 - [Theming](#theming)
 - [User Segmentation](#user-segmentation)
 - [Control UI Elements](#ui-elements)
 - [Localization](#localization)
+
+# Requirements
+
+The framework builds for iOS 12+, but all functionality requires iOS 14+. So for any app using WishKit
+as a dependency that supports iOS 12 or 13, you will need to add `if #available(iOS 14, *) { }` code
+around any use of WishKit.
 
 # UIKit
 

@@ -11,6 +11,7 @@ import WishKitShared
 import Foundation
 import SwiftUI
 
+@available(iOS 14, *)
 final class WishModel: ObservableObject {
 
     @Published

@@ -8,6 +8,7 @@
 
 import SwiftUI
 
+@available(iOS 14, *)
 struct AddButton: View {
     
     @Environment(\.colorScheme)
@@ -64,6 +65,7 @@ struct AddButton: View {
     }
 }
 
+@available(iOS 14, *)
 struct RoundButtonStyle: ButtonStyle {
 
     func makeBody(configuration: Self.Configuration) -> some View {
@@ -74,6 +76,7 @@ struct RoundButtonStyle: ButtonStyle {
     }
 }
 
+@available(iOS 14, *)
 extension ButtonStyle where Self == RoundButtonStyle {
     static var roundButtonStyle: RoundButtonStyle {
         RoundButtonStyle()

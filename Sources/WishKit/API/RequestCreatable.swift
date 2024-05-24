@@ -8,8 +8,10 @@
 
 import Foundation
 
+@available(iOS 14, *)
 protocol RequestCreatable {}
 
+@available(iOS 14, *)
 extension RequestCreatable {
 
     /// Create a POST request with JSON body
@@ -73,6 +75,7 @@ extension RequestCreatable {
     }
 }
 
+@available(iOS 14, *)
 extension URLRequest {
 
     /// Adds User UUID and Bearer token to URLRequest if given.

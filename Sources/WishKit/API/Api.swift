@@ -9,12 +9,14 @@
 import Foundation
 import WishKitShared
 
+@available(iOS 14, *)
 struct Api: RequestCreatable {
     enum Version: String {
         case v1
     }
 }
 
+@available(iOS 14, *)
 enum ApiResult<Success, Error> {
     case success(Success)
     case failure(Error)
@@ -22,6 +24,7 @@ enum ApiResult<Success, Error> {
 
 // MARK: - Generic Send Functions
 
+@available(iOS 14, *)
 extension Api {
     /// Generic Send Function. You need to specify the Result<T, Error> type to help inferring it.
     /// e.g: Api.send(request: resetRequest) { (result: Result<ResetPasswordResponse, ApiError.Kind>) in ... }
