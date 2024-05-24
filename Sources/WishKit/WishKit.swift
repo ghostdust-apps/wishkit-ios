@@ -17,8 +17,6 @@ import Combine
 @available(iOS 14, *)
 public struct WishKit {
     
-    private static var subscribers: Set<AnyCancellable> = []
-
     static var apiKey = "my-fancy-api-key"
 
     static var user = User()
