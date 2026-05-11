@@ -212,7 +212,6 @@ struct WishlistViewIOS: View {
         }
         .frame(maxWidth: .infinity)
         .background(backgroundColor)
-        .ignoresSafeArea(edges: [.leading, .bottom, .trailing])
         .navigationTitle(WishKit.config.localization.featureWishlist)
         .navigationBarTitleDisplayMode(.inline)
         .toolbar {
