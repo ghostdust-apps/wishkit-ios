@@ -88,7 +88,7 @@ struct DetailWishView: View {
                             .frame(maxWidth: 700)
                     }
                 }.padding([.leading, .bottom, .trailing])
-            }.ignoresSafeArea(edges: [.bottom, .leading, .trailing])
+            }
 
             Spacer()
         }
