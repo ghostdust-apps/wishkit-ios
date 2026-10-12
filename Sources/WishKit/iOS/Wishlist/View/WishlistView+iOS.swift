@@ -44,7 +44,7 @@ struct WishlistView: View {
 
                 if wishModel.isLoading && !wishModel.hasFetched {
                     WishlistSkeletonView()
-                        .scrollContentBackground(WishKit.theme.tertiaryColor == nil ? .automatic : .hidden)
+                        .compatScrollContentBackgroundHidden(WishKit.theme.tertiaryColor != nil)
                 } else if !currentList.isEmpty {
                     List(currentList) { wish in
                         NavigationLink(destination: {
@@ -55,7 +55,7 @@ struct WishlistView: View {
                         .fullWidthListSeparator()
                         .listRowBackground(WishKit.theme.secondaryColor?.resolved(for: colorScheme))
                     }
-                    .scrollContentBackground(WishKit.theme.tertiaryColor == nil ? .automatic : .hidden)
+                    .compatScrollContentBackgroundHidden(WishKit.theme.tertiaryColor != nil)
                     .refreshable { await wishModel.fetchListAsync() }
                 }
             }
@@ -66,15 +66,16 @@ struct WishlistView: View {
         .navigationTitle(WishKit.config.localization.featureWishlist)
         .navigationBarTitleDisplayMode(.inline)
         .toolbar {
-            if WishKit.config.buttons.doneButton.display == .show {
-                ToolbarItem(placement: .topBarLeading) {
+            // `if` inside the items: an optional ToolbarContent needs iOS 16.
+            ToolbarItem(placement: .topBarLeading) {
+                if WishKit.config.buttons.doneButton.display == .show {
                     Button(WishKit.config.localization.done) {
                         presentationMode.wrappedValue.dismiss()
                     }
                 }
             }
-            if WishKit.config.buttons.addButton.display == .show {
-                ToolbarItem(placement: .topBarTrailing) {
+            ToolbarItem(placement: .topBarTrailing) {
+                if WishKit.config.buttons.addButton.display == .show {
                     NavigationLink {
                         CreateWishView(createActionCompletion: { wishModel.fetchList() })
                     } label: {

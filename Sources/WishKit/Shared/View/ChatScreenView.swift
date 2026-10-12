@@ -93,10 +93,19 @@ struct ChatScreenView: View {
         }
     }
 
-    private var inputBar: some View {
-        HStack(alignment: .bottom, spacing: 10) {
+    @ViewBuilder
+    private var messageField: some View {
+        if #available(iOS 16.0, macOS 13.0, *) {
             TextField(WishKit.config.localization.writeAMessage, text: $messageText, axis: .vertical)
                 .lineLimit(1...4)
+        } else {
+            TextField(WishKit.config.localization.writeAMessage, text: $messageText)
+        }
+    }
+
+    private var inputBar: some View {
+        HStack(alignment: .bottom, spacing: 10) {
+            messageField
                 .textFieldStyle(.plain)
                 .padding(.horizontal, 14)
                 .padding(.vertical, 9)

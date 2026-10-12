@@ -11,7 +11,7 @@ import SwiftUI
 
 extension View {
     public func withNavigation() -> some View {
-        NavigationStack {
+        CompatNavigationStack {
             self
         }
     }

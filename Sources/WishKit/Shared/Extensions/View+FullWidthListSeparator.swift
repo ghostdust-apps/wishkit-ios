@@ -10,10 +10,15 @@
 import SwiftUI
 
 extension View {
+    @ViewBuilder
     func fullWidthListSeparator() -> some View {
-        self
-            .alignmentGuide(.listRowSeparatorLeading) { _ in 0 }
-            .alignmentGuide(.listRowSeparatorTrailing) { dimensions in dimensions.width }
+        if #available(iOS 16.0, *) {
+            self
+                .alignmentGuide(.listRowSeparatorLeading) { _ in 0 }
+                .alignmentGuide(.listRowSeparatorTrailing) { dimensions in dimensions.width }
+        } else {
+            self
+        }
     }
 }
 #endif

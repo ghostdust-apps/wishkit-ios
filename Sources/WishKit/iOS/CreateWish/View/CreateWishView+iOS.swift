@@ -29,6 +29,18 @@ struct CreateWishView: View {
 
     let createActionCompletion: () -> Void
 
+    @ViewBuilder
+    private var descriptionField: some View {
+        if #available(iOS 16.0, *) {
+            TextField("", text: $viewModel.descriptionText, axis: .vertical)
+                .textFieldStyle(.plain)
+                .lineLimit(4...8)
+        } else {
+            TextEditor(text: $viewModel.descriptionText)
+                .frame(minHeight: 80, maxHeight: 160)
+        }
+    }
+
     var body: some View {
         ScrollView {
             VStack(spacing: 16) {
@@ -73,10 +85,8 @@ struct CreateWishView: View {
                     .padding(.horizontal, 15)
 
                     HStack {
-                        TextField("", text: $viewModel.descriptionText, axis: .vertical)
-                            .textFieldStyle(.plain)
+                        descriptionField
                             .font(.subheadline)
-                            .lineLimit(4...8)
                             .onChange(of: viewModel.descriptionText) { _ in
                                 viewModel.handleTitleAndDescriptionChange()
                             }
@@ -123,7 +133,7 @@ struct CreateWishView: View {
             }
             .padding()
         }
-        .scrollDismissesKeyboard(.interactively)
+        .compatScrollDismissesKeyboardInteractively()
         .background(backgroundColor)
         .navigationTitle(WishKit.config.localization.createWish)
         .navigationBarTitleDisplayMode(.inline)

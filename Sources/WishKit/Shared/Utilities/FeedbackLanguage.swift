@@ -11,6 +11,7 @@ import NaturalLanguage
 
 /// Detects — fully on-device — whether a piece of user-generated feedback is
 /// written in a different language than the one the app is running in.
+@available(iOS 16.0, *)
 enum FeedbackLanguage {
 
     /// Below this length detection is too unreliable ("Dark Mode"), so we treat it as a match.

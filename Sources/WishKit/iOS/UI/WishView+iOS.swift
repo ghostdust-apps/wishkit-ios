@@ -344,7 +344,7 @@ extension WishView {
     private static let chevronUpSystemName = "chevron.up"
 
     var upvoteIconImage: some View {
-        upvoteIcon.fontWeight(.bold)
+        upvoteIcon.font(.body.bold())
     }
 
     private var upvoteIcon: Image {

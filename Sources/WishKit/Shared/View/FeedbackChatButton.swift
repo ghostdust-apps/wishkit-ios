@@ -83,7 +83,7 @@ struct FeedbackChatButton: View {
         }
         .frame(minWidth: 420, minHeight: 520)
         #else
-        NavigationStack {
+        CompatNavigationStack {
             ChatScreenView()
                 .navigationTitle(WishKit.config.localization.chat)
                 #if os(iOS)

@@ -48,7 +48,7 @@ struct DetailWishView: View {
             }
             .frame(maxWidth: .infinity)
         }
-        .scrollDismissesKeyboard(.interactively)
+        .compatScrollDismissesKeyboardInteractively()
         .background(backgroundColor)
         .navigationTitle(WishKit.config.localization.detail)
         .navigationBarTitleDisplayMode(.inline)
