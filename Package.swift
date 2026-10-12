@@ -1,11 +1,15 @@
-// swift-tools-version:5.6
+// swift-tools-version:5.9
 import PackageDescription
 
 let package = Package(
     name: "wishkit-ios",
+    defaultLocalization: "en",
     platforms: [
-        .macOS(.v12),
-        .iOS(.v14)
+        .macOS(.v13),
+        .iOS(.v15),
+        .visionOS(.v1),
+        .watchOS(.v10),
+        .tvOS(.v17)
     ],
     products: [
         .library(name: "WishKit", targets: ["WishKit"])
@@ -14,9 +18,15 @@ let package = Package(
         .package(url: "https://github.com/wishkit/wishkit-ios-shared.git", exact: "1.5.0")
     ],
     targets: [
-        .target(name: "WishKit", dependencies: [
-            .product(name: "WishKitShared", package: "wishkit-ios-shared")
-        ]),
+        .target(
+            name: "WishKit",
+            dependencies: [
+                .product(name: "WishKitShared", package: "wishkit-ios-shared")
+            ],
+            resources: [
+                .copy("PrivacyInfo.xcprivacy")
+            ]
+        ),
         .testTarget(name: "WishKitTests", dependencies: [.target(name: "WishKit")]),
     ]
 )
